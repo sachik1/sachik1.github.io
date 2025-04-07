@@ -2,26 +2,128 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Glitch Art</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Glitch Art | Sachi Kelkar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff;
+      color: #111;
+    }
+
+    .navbar {
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      color: #D4AF37 !important;
+      letter-spacing: 1px;
+    }
+
+    .nav-link {
+      color: #333;
+      font-weight: 400;
+      margin-left: 1.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #D4AF37;
+    }
+
+    .nav-link.active {
+      color: #D4AF37 !important;
+    }
+
+
+    .glitch-section {
+      padding: 100px 20px;
+    }
+
+    .glitch-img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .glitch-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .glitch-text h2 {
+      font-weight: 700;
+      color: #D4AF37;
+      margin-bottom: 20px;
+    }
+
+    .glitch-text p {
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+      .glitch-text {
+        margin-top: 30px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">About Me</a>
-    <a href="glitch.html">Glitch Art</a>
-    <a href="meme.html">Meme</a>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">SACHI KELKAR</a>
+      <div class="collapse navbar-collapse show">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="glitch.html">Glitch Art</a></li>
+          <li class="nav-item"><a class="nav-link" href="meme.html">Meme</a></li>
+          <li class="nav-item"><a class="nav-link" href="minecraft.html">Minecraft</a></li>
+          <li class="nav-item"><a class="nav-link active" href="3dPrint.html">3d Print</a></li>
+          <li class="nav-item"><a class="nav-link active" href="netArt.html">Net Art</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
-  <div class="container">
-    <h1>Glitch Art</h1>
-    <img src="assets/glitchImage1.png" alt="Glitched American Flag">
-    <img src="assets/glitchImage2.png" alt="Glitched Dollar Bill">
-    <p>
-      A glitch is an intentional, sometimes accidental, distortion of digital images to display a message.
-      The images are a series of pictures that represent the present and future of America.
-      The images are all glitched because America is divided, which is demonstrated by the American Flag
-      and Great Seal of the US being divided. There is also a shadow over the dollar bill to foreshadow that we, as a nation, may not be heading in the right direction.
-    </p>
-  </div>
+  <!-- Glitch Section -->
+  <section class="glitch-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Glitched Flag Image -->
+        <div class="col-md-4 text-center mb-4 mb-md-0">
+          <img src="assets/glitchImage1.png" alt="Glitched American Flag" class="glitch-img">
+        </div>
+
+        <!-- Center Text -->
+        <div class="col-md-4 glitch-text">
+          <h2>Glitch Art</h2>
+          <p>
+            A glitch is an intentional, sometimes accidental, distortion of digital images to display a message.
+            These images represent the present and future of America. The American Flag and Great Seal are glitched
+            to reflect division in the country. A shadow over the dollar bill foreshadows that we, as a nation,
+            may not be heading in the right direction.
+          </p>
+        </div>
+
+        <!-- Right Glitched Dollar Image -->
+        <div class="col-md-4 text-center">
+          <img src="assets/glitchImage2.png" alt="Glitched Dollar Bill" class="glitch-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
