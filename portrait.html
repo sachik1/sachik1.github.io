@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Self Portrait</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #f5f5ff; }
+    iframe { display: block; margin: 20px 0; border: 1px solid #ccc; }
+    pre { background: #fff; padding: 15px; border: 1px solid #ddd; overflow-x: auto; }
+  </style>
+</head>
+<body>
+  <h1>My Self Portrait</h1>
+  <p>This is a visual self-portrait created using p5.js and drawing primitives like ellipses, rectangles, and arcs.</p>
+
+  <iframe src="selfie_sketch.html" width="600" height="600"></iframe>
+
+  <h2>Code Used:</h2>
+  <pre>
+function setup() {
+  createCanvas(600, 600);
+  background(255, 245, 250);
+  noStroke();
+
+  // Hair Back
+  fill(40, 30, 20);
+  ellipse(300, 320, 300, 400);
+  ellipse(190, 380, 90, 190);
+  ellipse(410, 380, 90, 190);
+
+  // Neck
+  fill(255, 220, 200);
+  rect(280, 390, 40, 80, 20);
+
+  // Face
+  fill(255, 220, 200);
+  ellipse(300, 280, 200, 240);
+
+  // Blush
+  fill(255, 160, 160, 90);
+  ellipse(250, 320, 30, 15);
+  ellipse(350, 320, 30, 15);
+
+  // Eyes
+  fill(40, 20, 10);
+  ellipse(260, 270, 20, 26);
+  ellipse(340, 270, 20, 26);
+
+  // Eye highlights
+  fill(255);
+  ellipse(263, 265, 5, 5);
+  ellipse(343, 265, 5, 5);
+
+  // Eyebrows
+  fill(40, 30, 20);
+  rect(240, 245, 40, 5, 2);
+  rect(320, 245, 40, 5, 2);
+
+  // Nose
+  fill(255, 210, 190);
+  ellipse(300, 285, 8, 8);
+
+  // Mouth
+  fill(230, 100, 130);
+  arc(300, 310, 50, 30, 0, PI);
+
+  // Glasses
+  stroke(90);
+  strokeWeight(2);
+  noFill();
+  rect(230, 250, 55, 35, 10);
+  rect(315, 250, 55, 35, 10);
+  line(285, 265, 315, 265);
+  noStroke();
+
+  // Shirt
+  fill(255);
+  rect(220, 400, 160, 140, 20);
+
+  // Vest
+  fill(130, 200, 140);
+  rect(225, 400, 150, 140, 20);
+
+  // Vest stripes
+  fill(100, 170, 110);
+  rect(225, 440, 150, 12);
+  fill(80, 150, 90);
+  rect(225, 470, 150, 12);
+
+  // Hair Front Strands
+  fill(40, 30, 20);
+  ellipse(210, 320, 60, 130);
+  ellipse(390, 320, 60, 130);
+}
+  </pre>
+
+  <h2>Selfie Reference:</h2>
+  <p><a href="selfie.jpg" target="_blank">View My Selfie</a></p>
+</body>
+</html>
