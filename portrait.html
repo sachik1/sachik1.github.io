@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Self Portrait | Sachi Kelkar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
       background-color: #fff;
       color: #111;
-      padding: 20px;
     }
 
     .navbar {
@@ -41,10 +39,43 @@
       color: #D4AF37 !important;
     }
 
+    .portrait-section {
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .portrait-text {
+      max-width: 750px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.7;
+    }
+
+    .portrait-text h2 {
+      font-weight: 700;
+      color: #D4AF37;
+      margin-bottom: 20px;
+    }
+
+    .portrait-text a {
+      color: #D4AF37;
+      text-decoration: none;
+    }
+
+    .portrait-text a:hover {
+      text-decoration: underline;
+    }
+
     iframe {
-      display: block;
+      max-width: 600px;
+      width: 100%;
+      height: 600px;
       margin: 40px auto;
+      border-radius: 15px;
       border: 1px solid #ccc;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      display: block;
     }
 
     pre {
@@ -53,14 +84,8 @@
       border: 1px solid #ddd;
       overflow-x: auto;
       max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .container-custom {
-      max-width: 960px;
-      margin: 0 auto;
-      padding-top: 80px;
-      text-align: center;
+      margin: 40px auto;
+      text-align: left;
     }
   </style>
 </head>
@@ -69,75 +94,77 @@
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">SACHI KELKAR</a>
-      <div class="collapse navbar-collapse show">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse show" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="index.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="glitch.html">Glitch Art</a></li>
           <li class="nav-item"><a class="nav-link" href="meme.html">Meme</a></li>
           <li class="nav-item"><a class="nav-link" href="minecraft.html">Minecraft</a></li>
           <li class="nav-item"><a class="nav-link" href="3dPrint.html">3d Print</a></li>
-          <li class="nav-item"><a class="nav-link active" href="netArt.html">Net Art</a></li>
+          <li class="nav-item"><a class="nav-link" href="netArt.html">Net Art</a></li>
+          <li class="nav-item"><a class="nav-link active" href="portrait.html">Self Portrait</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <div class="container-custom">
-    <h1>My Self Portrait</h1>
-    <p>This is a visual self-portrait created using p5.js and drawing primitives like ellipses, rectangles, and arcs.</p>
+  <!-- Self Portrait Section -->
+  <section class="portrait-section">
+    <div class="portrait-text">
+      <h2>Self Portrait</h2>
+      <p>
+        This self-portrait is a creative visual interpretation of myself, made using drawing primitives in p5.js.
+        I used shapes like ellipses, arcs, and rectangles to sketch out my likeness — focusing on features like hair, glasses, and sweater vest.
+      </p>
+      <p>
+        View my selfie reference:
+        <a href="selfie.png" target="_blank">selfie.png</a>
+      </p>
+    </div>
 
-    <iframe src="selfie_sketch.html" width="600" height="600"></iframe>
+    <iframe src="selfie_sketch.html"></iframe>
 
-    <h2>Code Used:</h2>
+    <h2 style="color:#D4AF37; margin-top: 60px;">Code Used:</h2>
     <pre>
 function setup() {
   createCanvas(600, 600);
   background(255, 245, 250);
   noStroke();
 
-  // Hair Back
   fill(40, 30, 20);
   ellipse(300, 320, 300, 400);
   ellipse(190, 380, 90, 190);
   ellipse(410, 380, 90, 190);
 
-  // Neck
   fill(255, 220, 200);
   rect(280, 390, 40, 80, 20);
-
-  // Face
-  fill(255, 220, 200);
   ellipse(300, 280, 200, 240);
 
-  // Blush
   fill(255, 160, 160, 90);
   ellipse(250, 320, 30, 15);
   ellipse(350, 320, 30, 15);
 
-  // Eyes
   fill(40, 20, 10);
   ellipse(260, 270, 20, 26);
   ellipse(340, 270, 20, 26);
 
-  // Eye highlights
   fill(255);
   ellipse(263, 265, 5, 5);
   ellipse(343, 265, 5, 5);
 
-  // Eyebrows
   fill(40, 30, 20);
   rect(240, 245, 40, 5, 2);
   rect(320, 245, 40, 5, 2);
 
-  // Nose
   fill(255, 210, 190);
   ellipse(300, 285, 8, 8);
 
-  // Mouth
   fill(230, 100, 130);
   arc(300, 310, 50, 30, 0, PI);
 
-  // Glasses
   stroke(90);
   strokeWeight(2);
   noFill();
@@ -146,31 +173,25 @@ function setup() {
   line(285, 265, 315, 265);
   noStroke();
 
-  // Shirt
   fill(255);
   rect(220, 400, 160, 140, 20);
 
-  // Vest
   fill(130, 200, 140);
   rect(225, 400, 150, 140, 20);
 
-  // Vest stripes
   fill(100, 170, 110);
   rect(225, 440, 150, 12);
   fill(80, 150, 90);
   rect(225, 470, 150, 12);
 
-  // Hair Front Strands
   fill(40, 30, 20);
   ellipse(210, 320, 60, 130);
   ellipse(390, 320, 60, 130);
 }
     </pre>
-
-    <h2>Selfie Reference:</h2>
-    <p><a href="selfie.png" target="_blank">View My Selfie (PNG)</a></p>
-  </div>
+  </section>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
